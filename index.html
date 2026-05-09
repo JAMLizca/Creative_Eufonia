@@ -971,6 +971,85 @@
             }
 
         }
+
+        /* =========================
+   DISEÑO BD Y PROTOTIPO (DINÁMICO)
+========================= */
+
+.db-section {
+    background: linear-gradient(to bottom, var(--white), var(--cream));
+}
+
+/* Tarjeta con efecto Glassmorphism adaptado a tu marca */
+.glass-card-custom {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(72, 151, 8, 0.2); /* Borde verde sutil */
+    border-radius: 30px;
+    padding: 40px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 35px rgba(56, 33, 27, 0.05);
+}
+
+.glass-card-custom:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(56, 33, 27, 0.12);
+    border-color: var(--green);
+}
+
+/* Contenedor de Imagen con Zoom */
+.img-zoom-container {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid var(--cream);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.img-zoom-container img {
+    transition: transform 0.6s ease;
+}
+
+.glass-card-custom:hover .img-zoom-container img {
+    transform: scale(1.08);
+}
+
+/* Botón Prototipo Novedoso */
+.btn-live {
+    background: linear-gradient(135deg, var(--green), var(--green-light));
+    color: white !important;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(72, 151, 8, 0.2);
+}
+
+.btn-live:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(72, 151, 8, 0.3);
+}
+
+.live-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ff4d4d;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 77, 77, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
+}
     </style>
 
 </head>
@@ -1493,6 +1572,141 @@
 
     </section>
 
+    <section id="desarrollo" class="db-section">
+    <div class="container">
+        
+        <div class="section-title">
+            <span class="badge-objective">Fase de Arquitectura</span>
+            <h2>Ingeniería y Prototipado</h2>
+            <p>Desde la estructuración de datos hasta la experiencia de usuario final.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+            
+            <div class="col-lg-6">
+                <div class="glass-card-custom">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="objective-icon me-3" style="width:60px; height:60px; margin-bottom:0;">
+                            <i class="bi bi-database-fill-gear" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <h3 class="m-0" style="color: var(--brown); font-weight:700;">Diseño de Base de Datos</h3>
+                    </div>
+                    
+                    <div class="img-zoom-container">
+                        <img src="/img/DiagramE-R.png" class="img-fluid" alt="Diagrama de Base de Datos">
+                    </div>
+                    
+                    <p class="text-muted">
+                        Estructura relacional diseñada para garantizar la integridad de la información de las asociadas, 
+                        la trazabilidad de los productos y la gestión de procesos productivos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="glass-card-custom d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="objective-icon me-3" style="width:60px; height:60px; margin-bottom:0; background: linear-gradient(135deg, var(--yellow), #ff9800);">
+                                <i class="bi bi-window-stack" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 class="m-0" style="color: var(--brown); font-weight:700;">Mockup e Interfaz</h3>
+                        </div>
+                        
+                        <div class="objective-item mb-4">
+                            <div class="number">UX</div>
+                            <p>Optamos por un desarrollo <strong>ágil y directo</strong> a producción, priorizando la usabilidad y la respuesta inmediata en dispositivos móviles.</p>
+                        </div>
+
+                        <p class="mb-4">
+                            En este proyecto, la fase de prototipado evolucionó rápidamente hacia una <strong>plataforma funcional</strong>. 
+                            Esto nos permitió validar la interacción del usuario con datos reales de la asociación desde etapas tempranas.
+                        </p>
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <a href="https://pag-eufonias-del-magdalena.vercel.app/" target="_blank" class="btn-live">
+                            <span class="live-dot"></span>
+                            Ver Plataforma en Producción
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+ <!-- =========================
+     MODAL UML
+========================= -->
+
+    <div class="image-modal" id="umlModal">
+
+        <span id="closeModal">&times;</span>
+
+        <img src="/img/UML.png" alt="Diagrama UML Grande">
+
+    </div>
+
+    <!-- =========================
+     UML
+========================= -->
+
+    <section id="uml">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Diagrama UML</h2>
+
+                <p>
+                    Los diagrams UML (Lenguaje Unificado de Modelos) son herramientas
+                    que permiten de manera gráfica la estructura y el comportamiento
+                    de un sistema.
+                </p>
+
+            </div>
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <img src="/img/UML.png" alt="Diagrama UML del sistema web" class="uml-img" id="openUML">
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <h3>Casos de Uso</h3>
+
+                    <p>
+                        El diagrama UML permite representar la interacción entre
+                        los usuarios y las funcionalidades del sistema web de la asociación
+                        Eufonias del Magdalena.
+                    </p>
+
+                    <ul>
+
+                        <li>Visualizar productos</li>
+                        <li>Consultar información</li>
+                        <li>Contactar la asociación</li>
+                        <li>Gestionar productos</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
 
     <!-- =========================
      INVESTIGACIÓN
@@ -1561,73 +1775,6 @@
         </div>
 
     </section>
-
-    <!-- =========================
-     UML
-========================= -->
-
-    <section id="uml">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>Diagrama UML</h2>
-
-                <p>
-                    Los diagrams UML (Lenguaje Unificado de Modelos) son herramientas
-                    que permiten de manera gráfica la estructura y el comportamiento
-                    de un sistema.
-                </p>
-
-            </div>
-
-            <div class="row align-items-center g-5">
-
-                <div class="col-lg-6">
-
-                    <img src="/img/UML.png" alt="Diagrama UML del sistema web" class="uml-img" id="openUML">
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <h3>Casos de Uso</h3>
-
-                    <p>
-                        El diagrama UML permite representar la interacción entre
-                        los usuarios y las funcionalidades del sistema web de la asociación
-                        Eufonias del Magdalena.
-                    </p>
-
-                    <ul>
-
-                        <li>Visualizar productos</li>
-                        <li>Consultar información</li>
-                        <li>Contactar la asociación</li>
-                        <li>Gestionar productos</li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- =========================
-     MODAL UML
-========================= -->
-
-    <div class="image-modal" id="umlModal">
-
-        <span id="closeModal">&times;</span>
-
-        <img src="/img/UML.png" alt="Diagrama UML Grande">
-
-    </div>
 
     <!--  CONCLUSIONES -->
 
@@ -1698,6 +1845,7 @@
 
     </section>
 
+    
     <!-- =========================
      FOOTER
 ========================= -->
