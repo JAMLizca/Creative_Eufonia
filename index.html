@@ -1311,6 +1311,78 @@
     color: var(--yellow);
     transform: scale(1.2);
 }
+
+/* =========================
+   PLANTEAMIENTO (STORYTELLING)
+========================= */
+
+.problema-container {
+    position: relative;
+    padding: 60px 40px;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+/* Decoración de fondo sutil (mancha de café o grano) */
+.problema-container::before {
+    content: '☕';
+    position: absolute;
+    font-size: 15rem;
+    bottom: -50px;
+    right: -30px;
+    opacity: 0.03;
+    transform: rotate(-15deg);
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.problem-statement {
+    border-left: 4px solid var(--primary); /* Color resaltado para el problema */
+    padding-left: 25px;
+}
+
+.problem-statement h4 {
+    color: var(--brown);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.pain-point {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: var(--cream);
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.pain-point:hover {
+    transform: scale(1.02);
+    background: #f1ede7;
+}
+
+.pain-point i {
+    color: var(--primary);
+    font-size: 1.4rem;
+}
+
+.pain-point span {
+    font-size: 0.95rem;
+    color: var(--brown);
+    font-weight: 500;
+}
+
+@media (max-width: 992px) {
+    .problem-grid { grid-template-columns: 1fr; }
+}
     </style>
 
 </head>
@@ -1477,59 +1549,66 @@
 
     </section>
 
-    <!-- =========================
-     PLANTEAMIENTO DEL PROBLEMA
-========================== -->
+    <section id="problema" style="background-color: var(--cream);">
 
-    <section id="problema">
+    <div class="container">
 
-        <div class="container">
+        <div class="section-title">
+            <span class="badge-objective" style="background: rgba(229, 65, 103, 0.1); color: var(--primary);">
+                Desafío Identificado
+            </span>
+            <h2>Planteamiento del Problema</h2>
+            <p>Identificamos las barreras que limitan el crecimiento de nuestras productoras.</p>
+        </div>
 
-            <div class="section-title">
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+                <div class="problema-container">
+                    
+                    <div class="problem-grid">
+                        
+                        <div class="problem-statement">
+                            <h4>La Brecha Digital en el Sector Cafetero</h4>
+                            <p class="text-muted">
+                                Actualmente, la Asociación <strong>Eufonias del Magdalena</strong> enfrenta un vacío tecnológico que impide que su café artesanal llegue a nuevos mercados. 
+                            </p>
+                            <p>
+                                Sin una vitrina virtual, el esfuerzo de las mujeres cafeteras queda limitado a la comercialización local, perdiendo el potencial de la economía digital.
+                            </p>
+                            <div class="mt-4">
+                                <strong style="color: var(--green);">Nuestra Misión:</strong> 
+                                <span class="text-muted">Transformar esta debilidad en una fortaleza competitiva a través del desarrollo web.</span>
+                            </div>
+                        </div>
 
-                <h2>Planteamiento del Problema</h2>
+                        <div class="problem-visual">
+                            
+                            <div class="pain-point">
+                                <i class="bi bi-eye-slash-fill"></i>
+                                <span><strong>Invisibilidad Digital:</strong> Falta de presencia en buscadores y redes de mercado.</span>
+                            </div>
 
-                <p>
-                    Situación identificada en la Asociación Eufonias del Magdalena
-                </p>
+                            <div class="pain-point">
+                                <i class="bi bi-graph-down-arrow"></i>
+                                <span><strong>Comercialización Limitada:</strong> Dependencia total de canales físicos tradicionales.</span>
+                            </div>
 
-            </div>
+                            <div class="pain-point">
+                                <i class="bi bi-device-hdd-fill"></i>
+                                <span><strong>Desconexión de Datos:</strong> Dificultad para centralizar y mostrar la oferta artesanal.</span>
+                            </div>
 
-            <div class="row justify-content-center">
-
-                <div class="col-lg-10">
-
-                    <div class="custom-card">
-
-                        <p>
-                            La Asociación <strong>Eufonias del Magdalena</strong> presenta
-                            dificultades para posicionarse en el entorno digital debido
-                            a la falta de una plataforma web que permita promocionar
-                            sus productos de manera eficiente.
-                        </p>
-
-                        <p>
-                            Esta situación afecta principalmente la visibilidad de los
-                            productos artesanales y limita las oportunidades de crecimiento
-                            y comercialización de la asociación.
-                        </p>
-
-                        <p>
-                            Por esta razón, surge la necesidad de desarrollar una solución
-                            tecnológica que facilite el acceso a la información, fortalezca
-                            la presencia digital y permita dar a conocer el trabajo realizado
-                            por las mujeres cafeteras de la organización.
-                        </p>
+                        </div>
 
                     </div>
 
                 </div>
-
             </div>
-
         </div>
 
-    </section>
+    </div>
+
+</section>
 
     <!-- =========================
      OBJETIVOS
