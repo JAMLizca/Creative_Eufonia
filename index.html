@@ -1050,9 +1050,272 @@
     70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 77, 77, 0); }
     100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
 }
+
+/* =========================
+   CONCLUSIONES PREMIUM
+========================= */
+
+.conclusion-card {
+    background: white;
+    border-radius: 25px;
+    padding: 40px 30px;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(56, 33, 27, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.conclusion-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(72, 151, 8, 0.12);
+}
+
+/* El número de fondo para darle profundidad */
+.conclusion-number {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(72, 151, 8, 0.05);
+    z-index: -1;
+}
+
+.conclusion-icon-circle {
+    width: 80px;
+    height: 80px;
+    background: var(--cream);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: var(--green);
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.conclusion-card:hover .conclusion-icon-circle {
+    background: var(--green);
+    color: white;
+    transform: rotate(-10deg);
+}
+
+.conclusion-card h4 {
+    color: var(--brown);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.conclusion-card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.quote-cierre {
+    margin-top: 60px;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--brown), var(--brown-light));
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.quote-cierre i {
+    font-size: 3rem;
+    color: var(--yellow);
+    opacity: 0.3;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+/* =========================
+   INVESTIGACIÓN (DATOS DINÁMICOS)
+========================= */
+
+.investigacion-section {
+    background: white;
+}
+
+.stat-card-premium {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(56, 33, 27, 0.05);
+    border: 1px solid rgba(0,0,0,0.03);
+    height: 100%;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card-premium:hover {
+    transform: translateY(-10px);
+    border-color: var(--green);
+}
+
+.stat-card-premium h3 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, var(--green), var(--green-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-card-premium i {
+    font-size: 1.5rem;
+    color: var(--brown-light);
+    opacity: 0.5;
+    margin-bottom: 15px;
+}
+
+/* Barra de progreso sutil */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #eee;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, var(--yellow), var(--green));
+    border-radius: 10px;
+    transition: width 1.5s ease-in-out;
+}
+
+.stat-card-premium p {
+    font-weight: 500;
+    color: var(--brown);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Decoración circular de fondo */
+.circle-deco {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--cream);
+    border-radius: 50%;
+    top: -50px;
+    right: -50px;
+    z-index: -1;
+}
+
+/* =========================
+   DISEÑO UML (BLUEPRINT STYLE)
+========================= */
+
+#uml {
+    background-color: var(--white);
+    position: relative;
+}
+
+/* Contenedor de la imagen UML */
+.uml-wrapper {
+    position: relative;
+    padding: 15px;
+    background: var(--cream);
+    border-radius: 30px;
+    border: 2px dashed var(--green-light); /* Estilo plano técnico */
+    transition: 0.4s;
+}
+
+.uml-wrapper:hover {
+    border-style: solid;
+    border-color: var(--green);
+    transform: translateY(-5px);
+}
+
+.uml-img-custom {
+    width: 100%;
+    border-radius: 20px;
+    cursor: zoom-in;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+
+/* Badge flotante sobre la imagen */
+.zoom-badge {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: var(--green);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    box-shadow: 0 5px 15px rgba(72, 151, 8, 0.4);
+    opacity: 0.8;
+}
+
+/* Casos de Uso Estilizados */
+.use-case-list {
+    list-style: none;
+    padding: 0;
+}
+
+.use-case-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: var(--white);
+    margin-bottom: 12px;
+    border-radius: 15px;
+    border-left: 5px solid var(--yellow);
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.use-case-item:hover {
+    transform: translateX(10px);
+    background: var(--cream);
+    border-left-color: var(--green);
+}
+
+.use-case-item i {
+    font-size: 1.2rem;
+    color: var(--green);
+}
+
+/* Mejora del Modal */
+.image-modal {
+    backdrop-filter: blur(15px);
+    background: rgba(56, 33, 27, 0.95); /* Fondo color café oscuro transparente */
+}
+
+#closeModal {
+    top: 30px;
+    right: 40px;
+    transition: 0.3s;
+}
+
+#closeModal:hover {
+    color: var(--yellow);
+    transform: scale(1.2);
+}
     </style>
 
 </head>
+
+
 
 <body>
 
@@ -1638,213 +1901,205 @@
     </div>
 </section>
 
- <!-- =========================
-     MODAL UML
-========================= -->
+ <section id="uml">
+    <div class="container">
 
-    <div class="image-modal" id="umlModal">
+        <div class="section-title">
+            <span class="badge-objective">Arquitectura Lógica</span>
+            <h2>Diagrama de Casos de Uso</h2>
+            <p>Representación gráfica de cómo los diferentes actores interactúan con el sistema web para potenciar la asociación.</p>
+        </div>
 
-        <span id="closeModal">&times;</span>
+        <div class="row align-items-center g-5">
 
-        <img src="/img/UML.png" alt="Diagrama UML Grande">
+            <div class="col-lg-7">
+                <div class="uml-wrapper" id="openUML">
+                    <img src="/img/UML.png" alt="Diagrama UML" class="uml-img-custom">
+                    <div class="zoom-badge">
+                        <i class="bi bi-search"></i> Click para ampliar
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="ps-lg-4">
+                    <h3 class="mb-4" style="color: var(--brown); font-weight: 700;">Interacción del Sistema</h3>
+                    <p class="text-muted mb-4">
+                        El modelo UML nos permite definir el alcance técnico del proyecto, separando las acciones del 
+                        <strong>Administrador</strong> y los <strong>Visitantes</strong>.
+                    </p>
+
+                    <div class="use-case-list">
+                        <div class="use-case-item">
+                            <i class="bi bi-eye"></i>
+                            <span><strong>Visualizar productos:</strong> Acceso al catálogo artesanal completo.</span>
+                        </div>
+                        <div class="use-case-item">
+                            <i class="bi bi-info-circle"></i>
+                            <span><strong>Consultar información:</strong> Historia y datos de la asociación.</span>
+                        </div>
+                        <div class="use-case-item">
+                            <i class="bi bi-chat-dots"></i>
+                            <span><strong>Contactar:</strong> Enlace directo a canales de atención.</span>
+                        </div>
+                        <div class="use-case-item">
+                            <i class="bi bi-shield-lock"></i>
+                            <span><strong>Gestionar productos:</strong> Control administrativo del inventario.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="image-modal" id="umlModal">
+    <span id="closeModal">&times;</span>
+    <img src="/img/UML.png" alt="Diagrama UML Grande">
+</div>
+
+
+<section id="investigacion" class="investigacion-section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span class="badge-objective">Insights de Usuario</span>
+            <h2>Resultados de la Investigación</h2>
+            <p>
+                Analizamos las preferencias de nuestro público objetivo mediante encuestas 
+                para construir una solución alineada a sus necesidades reales.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="stat-card-premium">
+                    <div class="circle-deco"></div>
+                    <i class="bi bi-phone-vibrate"></i>
+                    <h3>95.5%</h3>
+                    <div class="progress-container">
+                        <div class="progress-fill" style="width: 95.5%;"></div>
+                    </div>
+                    <p>Usuarios que priorizan una navegación fluida desde dispositivos móviles.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="stat-card-premium">
+                    <div class="circle-deco"></div>
+                    <i class="bi bi-emoji-smile"></i>
+                    <h3>90.9%</h3>
+                    <div class="progress-container">
+                        <div class="progress-fill" style="width: 90.9%;"></div>
+                    </div>
+                    <p>Considera la facilidad de uso como el factor más importante del sitio.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="stat-card-premium">
+                    <div class="circle-deco"></div>
+                    <i class="bi bi-whatsapp"></i>
+                    <h3>81.8%</h3>
+                    <div class="progress-container">
+                        <div class="progress-fill" style="width: 81.8%;"></div>
+                    </div>
+                    <p>Prefiere una comunicación directa y rápida a través de WhatsApp.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-5 text-center">
+            <p class="text-muted small">
+                <i class="bi bi-info-circle me-1"></i> 
+                Muestra tomada a potenciales clientes y aliados estratégicos de la región.
+            </p>
+        </div>
 
     </div>
 
-    <!-- =========================
-     UML
-========================= -->
+</section>
 
-    <section id="uml">
+    <section id="conclusiones" style="background: #fdfdfd;">
+    <div class="container">
 
-        <div class="container">
+        <div class="section-title">
+            <span class="badge-objective" style="background: rgba(244, 196, 48, 0.15); color: var(--brown);">
+                Resultados Finales
+            </span>
+            <h2>Conclusiones del Proyecto</h2>
+            <p>El impacto de la tecnología en la tradición cafetera de la región.</p>
+        </div>
 
-            <div class="section-title">
+        <div class="row g-4">
 
-                <h2>Diagrama UML</h2>
-
-                <p>
-                    Los diagrams UML (Lenguaje Unificado de Modelos) son herramientas
-                    que permiten de manera gráfica la estructura y el comportamiento
-                    de un sistema.
-                </p>
-
-            </div>
-
-            <div class="row align-items-center g-5">
-
-                <div class="col-lg-6">
-
-                    <img src="/img/UML.png" alt="Diagrama UML del sistema web" class="uml-img" id="openUML">
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <h3>Casos de Uso</h3>
-
+            <div class="col-md-4">
+                <div class="conclusion-card">
+                    <div class="conclusion-number">01</div>
+                    <div class="conclusion-icon-circle">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h4>Mayor Visibilidad</h4>
                     <p>
-                        El diagrama UML permite representar la interacción entre
-                        los usuarios y las funcionalidades del sistema web de la asociación
-                        Eufonias del Magdalena.
+                        La plataforma rompe las barreras geográficas, permitiendo que la 
+                        <strong>Asociación Eufonias del Magdalena</strong> posicione su marca 
+                        en el mercado digital global.
                     </p>
-
-                    <ul>
-
-                        <li>Visualizar productos</li>
-                        <li>Consultar información</li>
-                        <li>Contactar la asociación</li>
-                        <li>Gestionar productos</li>
-
-                    </ul>
-
                 </div>
+            </div>
 
+            <div class="col-md-4">
+                <div class="conclusion-card">
+                    <div class="conclusion-number">02</div>
+                    <div class="conclusion-icon-circle">
+                        <i class="bi bi-stars"></i>
+                    </div>
+                    <h4>Impulso al Emprendimiento</h4>
+                    <p>
+                        Se dignifica y visibiliza el trabajo de las <strong>mujeres cafeteras</strong>, 
+                        proporcionando una herramienta profesional que respalda su esfuerzo y calidad artesanal.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="conclusion-card">
+                    <div class="conclusion-number">03</div>
+                    <div class="conclusion-icon-circle">
+                        <i class="bi bi-cpu"></i>
+                    </div>
+                    <h4>Evolución Tecnológica</h4>
+                    <p>
+                        La digitalización facilita la gestión de datos y optimiza la 
+                        comunicación directa con clientes, sentando las bases para una 
+                        <strong>asociación moderna y competitiva</strong>.
+                    </p>
+                </div>
             </div>
 
         </div>
 
-    </section>
-
-
-
-
-    <!-- =========================
-     INVESTIGACIÓN
-========================= -->
-
-    <section id="investigacion">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>Resultados de la Investigación</h2>
-
-                <p>
-                    Datos obtenidos mediante encuestas realizadas a usuarios
-                </p>
-
+        <div class="row mt-5 justify-content-center">
+            <div class="col-lg-10">
+                <div class="quote-cierre shadow-lg">
+                    <i class="bi bi-quote"></i>
+                    <h5 class="fw-light italic">
+                        "Este sistema no es solo código; es un puente entre la tradición de nuestra tierra 
+                        y las oportunidades del futuro digital."
+                    </h5>
+                    <div class="mt-3">
+                        <span class="badge rounded-pill bg-warning text-dark">Eufonias del Magdalena 2026</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="row g-4">
-
-                <div class="col-md-4">
-
-                    <div class="stat-box">
-
-                        <h3>95.5%</h3>
-
-                        <p>
-                            Desea una página adaptable a celulares
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <div class="stat-box">
-
-                        <h3>90.9%</h3>
-
-                        <p>
-                            Considera importante una página fácil de usar
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <div class="stat-box">
-
-                        <h3>81.8%</h3>
-
-                        <p>
-                            Prefiere WhatsApp como medio de contacto
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
         </div>
 
-    </section>
-
-    <!--  CONCLUSIONES -->
-
-    <section id="conclusiones">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>Conclusiones</h2>
-
-                <p>
-                    Impacto y resultados del proyecto
-                </p>
-
-            </div>
-
-            <div class="row g-4">
-
-                <div class="col-md-4">
-
-                    <div class="custom-card">
-
-                        <h4>Mayor Visibilidad</h4>
-
-                        <p>
-                            La plataforma permitirá fortalecer la presencia digital
-                            de la asociación.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <div class="custom-card">
-
-                        <h4>Impulso al Emprendimiento</h4>
-
-                        <p>
-                            El proyecto contribuye al reconocimiento del trabajo
-                            de las mujeres cafeteras.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <div class="custom-card">
-
-                        <h4>Transformación Tecnológica</h4>
-
-                        <p>
-                            La página web facilita el acceso a información y mejora
-                            la comunicación con los usuarios.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
+    </div>
+</section>
     
     <!-- =========================
      FOOTER
