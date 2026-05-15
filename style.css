@@ -1645,3 +1645,25 @@
         text-align: center;
     }
 }
+
+/* EFECTOS PARA LA INTRODUCCIÓN */
+#inicio .rounded-5 {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#inicio .rounded-5:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+#inicio .rounded-4 {
+    transition: all 0.3s ease;
+}
+
+#inicio .shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(111, 78, 55, 0.15) !important;
+}
+
+/* Tipografía de énfasis */
+#inicio strong {
+    color: #6f4e37; /* Color Café */
+}
