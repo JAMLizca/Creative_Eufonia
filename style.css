@@ -1609,3 +1609,67 @@
         background: rgba(255, 255, 255, 0.9);
         transform: translateX(5px);
     }
+
+    .hero-section {
+            position: relative;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000"><rect fill="%23FFFFFF" width="1000" height="1000"/><text transform="translate(100 100)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">☕</text><text transform="translate(300 300)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">☕</text><text transform="translate(500 500)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">☕</text><text transform="translate(700 700)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">☕</text><text transform="translate(900 900)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">☕</text><text transform="translate(100 900)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">💻</text><text transform="translate(300 700)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">💻</text><text transform="translate(500 300)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">💻</text><text transform="translate(700 100)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">💻</text><text transform="translate(900 300)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">💻</text><text transform="translate(100 500)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">🌱</text><text transform="translate(300 100)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">🌱</text><text transform="translate(500 900)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">🌱</text><text transform="translate(700 500)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">🌱</text><text transform="translate(900 700)" font-family="Arial, sans-serif" font-size="20" fill="%23D0D0D0">🌱</text></svg>');
+            background-attachment: fixed; /* Parallax effect */
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85); /* White tint */
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .floating-element {
+            position: absolute;
+            opacity: 0.7;
+            z-index: 5;
+            transition: transform 0.1s linear;
+        }
+
+        .floating-icon {
+            font-size: 2rem;
+            color: #d2b48c; /* Tan/Coffee color */
+        }
+
+        .icon-box {
+            font-size: 2.5rem;
+            color: #6f4e37; /* Coffee brown */
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .highlight-text {
+            color: #2c1e14; /* Darker brown */
+            font-weight: 700;
+        }
+
+        .section-title {
+            color: #4b3621; /* Rich brown */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
+            margin-bottom: 50px;
+        }
