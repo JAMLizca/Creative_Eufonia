@@ -1637,7 +1637,7 @@
     transform: translateY(-1px);
 }
 
-/* Ajuste para móviles: que no quede pegado al menú */
+/* Ajuste para móviles */
 @media (max-width: 991px) {
     .btn-download {
         margin-top: 15px;
