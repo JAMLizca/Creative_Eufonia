@@ -1459,3 +1459,153 @@
     .flip-card-back i {
         font-size: 3rem;
     }
+
+    .main-timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* La línea central */
+    .main-timeline::after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background-color: var(--brown-light);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -2px;
+        opacity: 0.2;
+    }
+
+    .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+
+    /* Círculos de la línea */
+    .timeline-icon {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: -25px;
+        top: 32px;
+        border-radius: 50%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        box-shadow: 0 0 0 4px var(--white);
+    }
+
+    .timeline-item.right .timeline-icon {
+        left: -25px;
+    }
+
+    .timeline-item.left { left: 0; }
+    .timeline-item.right { left: 50%; }
+
+    .timeline-content {
+        padding: 30px;
+        background-color: var(--white);
+        position: relative;
+        border-radius: 20px;
+        transition: 0.3s ease;
+    }
+
+    .timeline-content:hover {
+        transform: scale(1.02);
+        box-shadow: var(--shadow) !important;
+    }
+
+    /* Flechas indicadoras */
+    .timeline-item.left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 35px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent var(--white);
+    }
+
+    .timeline-item.right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 35px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--white) transparent transparent;
+    }
+
+    /* Mobile Responsive */
+    @media screen and (max-width: 768px) {
+        .main-timeline::after { left: 31px; }
+        .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+        .timeline-item.right { left: 0%; }
+        .timeline-icon {
+            left: 6px !important;
+            top: 32px;
+        }
+        .timeline-item.left::before, .timeline-item.right::before {
+            left: 60px;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--white) transparent transparent;
+        }
+    }
+
+    yle>
+    /* Estilos Glassmorphism para el Acordeón */
+    .custom-glass-accordion .accordion-item {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 15px !important;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .custom-glass-accordion .accordion-button {
+        background: transparent;
+        color: var(--brown);
+        font-weight: 600;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    .custom-glass-accordion .accordion-button:not(.collapsed) {
+        color: var(--green);
+        background: rgba(72, 151, 8, 0.05);
+    }
+
+    .custom-glass-accordion .accordion-button i {
+        font-size: 1.25rem;
+        color: var(--green);
+    }
+
+    .custom-glass-accordion .accordion-body {
+        color: #555;
+        line-height: 1.7;
+        padding: 0 25px 25px 65px; /* Alineado con el icono */
+    }
+
+    .custom-glass-accordion .accordion-item:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateX(5px);
+    }
